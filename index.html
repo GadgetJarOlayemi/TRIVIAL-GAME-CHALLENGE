@@ -3,22 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | TRIVIAL GAME</title>
-  </head>
-  <body style="text-align: center">
-    <canvas id="unity-canvas" style="width: 600px; height: 900px; background: #231F20"></canvas>
-    <script src="Build/TRIVIAL WEB.asm.loader.js"></script>
+    <title>Unity WebGL Player | TRIVIAL CHALLENGE</title>
+    <script src="Build/UnityLoader.js"></script>
     <script>
-      createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/TRIVIAL WEB.data.gz",
-        frameworkUrl: "Build/TRIVIAL WEB.asm.framework.js.gz",
-        codeUrl: "Build/TRIVIAL WEB.asm.js.gz",
-        memoryUrl: "Build/TRIVIAL WEB.asm.mem.gz",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "TRIVIAL GAME",
-        productVersion: "1.5.0",
-      });
+      UnityLoader.instantiate("unityContainer", "Build/TRIVIAL WEB.json");
     </script>
+  </head>
+  <body>
+    <div id="unityContainer" style="width: 600px; height: 900px; margin: auto"></div>
   </body>
 </html>
